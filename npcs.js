@@ -70,24 +70,19 @@ const npcs = [
     location: 'Kingdom\'s Edge'
   },
   {
-    name: '',
-    image:'https://vignette.wikia.nocookie.net/hollowknight/images/f/f2/Sheo_Circle.png/revision/latest/scale-to-width-down/150?cb=20170426184415',
-    location: ''
-  },
-  {
     name: 'Nailmaster Sheo',
-    image:'https://vignette.wikia.nocookie.net/hollowknight/images/2/28/Cloth_Circle-2.png/revision/latest/scale-to-width-down/150?cb=20180830235225',
+    image:'https://vignette.wikia.nocookie.net/hollowknight/images/f/f2/Sheo_Circle.png/revision/latest/scale-to-width-down/150?cb=20170426184415',
     location: 'Greenpath'
   },
   {
-    name: '',
-    image: 'https://vignette.wikia.nocookie.net/hollowknight/images/c/c1/Cornifer_Circle.png/revision/latest/scale-to-width-down/150?cb=20170426185850',
-    location: ''
+    name: 'Cloth',
+    image:'https://vignette.wikia.nocookie.net/hollowknight/images/2/28/Cloth_Circle-2.png/revision/latest/scale-to-width-down/150?cb=20180830235225',
+    location: 'Fungal Wastes'
   },
   {
-    name: '',
-    image:'https://vignette.wikia.nocookie.net/hollowknight/images/2/29/Hornet_Icon.png/revision/latest?cb=20170511203606',
-    location: ''
+    name: 'Cornifer',
+    image: 'https://vignette.wikia.nocookie.net/hollowknight/images/c/c1/Cornifer_Circle.png/revision/latest/scale-to-width-down/150?cb=20170426185850',
+    location: 'All Major Areas'
   },
   {
     name: 'Mister Mushroom',
@@ -116,8 +111,7 @@ const npcs = [
   },
   {
     name: 'Dreamers',
-    image:
-      'https://vignette.wikia.nocookie.net/hollowknight/images/d/da/Dreamers_Circle.png/revision/latest/scale-to-width-down/150?cb=20180815175042',
+    image:'https://vignette.wikia.nocookie.net/hollowknight/images/d/da/Dreamers_Circle.png/revision/latest/scale-to-width-down/150?cb=20180815175042',
     location: 'Resting Grounds'
   },
   {
@@ -262,3 +256,4 @@ const npcs = [
     location: 'Junk Pit'
   }
 ]
+
