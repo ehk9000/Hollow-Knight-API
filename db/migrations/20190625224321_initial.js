@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('locations', function(table) {
       table.increments('id').primary();
       table.string('name');
+      table.json('image');
 
       table.timestamps(true, true);
     }),
