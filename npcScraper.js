@@ -17,10 +17,6 @@ nightmare
   .then(function (result) {
     console.log(result);
   })
-  .then(function (result) {
-    fs.writeFileSync('testOutput.json', JSON.stringify(result));
-    console.log('Done!');
-  })
   .catch(function (error) {
     console.log('Search Failed', error);
   });
