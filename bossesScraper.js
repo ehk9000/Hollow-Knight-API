@@ -6,10 +6,12 @@ nightmare
   .wait(7000)
   .viewport(2500, 1500)
   .evaluate(() => {
-    const nodes = document.querySelectorAll("table img")
+    const nodes = document.querySelectorAll("table a")
     const images = [].slice.call(nodes)
     return images.map((node) => {
-      return node.src
+      if(node.innerText !== '') {
+        return node.innerText
+      }
     })
   })
   .end()
