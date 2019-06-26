@@ -20,4 +20,3 @@ app.get('/api/v1/hollowknight/bosses', (request, response) => {
       response.status(500).json({ error });
     })
 });
-

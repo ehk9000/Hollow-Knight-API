@@ -2,7 +2,7 @@ var Nightmare = require('nightmare');
 var nightmare = Nightmare({ show: true });
 
 nightmare
-  .goto('https://hollowknight.fandom.com/wiki/NPCs_of_Hallownest')
+  .goto('https://hollowknight.fandom.com/wiki/Bosses_of_Hallownest')
   .wait(7000)
   .viewport(2500, 1500)
   .evaluate(() => {
@@ -13,6 +13,7 @@ nightmare
     })
   })
   .end()
+
   .then(function (result) {
     console.log(result);
   })
