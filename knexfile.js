@@ -2,7 +2,7 @@
 module.exports = {
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/hollowKnight',
+    connection: 'postgres://localhost/hollowknight',
     migrations: {
       directory: './db/migrations'
     },
