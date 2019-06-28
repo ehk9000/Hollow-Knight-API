@@ -1,14 +1,19 @@
+const express = require('express');
+const app = express();
 const environment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
-const express = require('express');
-const app = express();
-const port = 3000;
 
 app.use(express.json());
 
-app.listen(3000, () => {
-  console.log(`App is running ⚡️ on port ${port}`)
+app.set('port', process.env.PORT || 3000)
+
+app.listen(app.get('port'), () => {
+  console.log(`App is running ⚡️`)
+});
+
+app.get('/', (req, res) => {
+    res.status(200).json('Hello world!');
 });
 
 app.get('/api/v1/hollow-knight/bosses', (request, response) => {
