@@ -16,11 +16,6 @@ app.get('/', (req, res) => {
     res.status(200).json('Hello world!');
 });
 
-app.get('/favicon.ico', (req, res) => {
-  res.status(200).json('Hello world!');
-});
-
-
 app.get('/api/v1/hollow-knight/bosses', (request, response) => {
   database('bosses').select()
     .then((bosses) => {
