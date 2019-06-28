@@ -1,6 +1,4 @@
-const locations = require('../../../locations');
-// const bosses = require('../../../bosses');
-// const npcs = require('../../../npcs');
+const locationsData = require('../../../locations.js');
 
 const createLocations = (knex, location) => {
   return knex('locations').insert({
@@ -8,39 +6,55 @@ const createLocations = (knex, location) => {
     image: location.image
   }, 'id')
   .then(locationId => {
-    const bossPromises = [];
+    const promises = [];
+    if (location.bosses) {
+      location.bosses.forEach(boss => {
+        promises.push(
+            createBosses(knex, {
+              name: boss.name,
+              image: boss.image,
+              location_id:locationId[0]
+            })
+          )
+      });
+    }
 
-    location.bosses.forEach(boss => {
-      if (boss === location.name) {
-        bossPromises.push(
-          createBosses(knex, locationId[0], boss));
-      }
-    });
-    return Promise.all(bossPromises);
-  });
+    if (location.npcs) {
+      location.npcs.forEach(npc => {
+        promises.push(
+          createNpcs(knex, {
+            name: npc.name,
+            image: npc.image,
+            location_id: locationId[0]
+          })
+        )
+      });
+    }
+    return Promise.all(promises);
+  }) 
 };
 
-const createBosses = (knex, locationId, boss) => {
-  return knex('bosses').insert({
-    name: boss.name,
-    image: boss.image,
-    location: locationId
-  }, 'id')
-  .then(locationId => {
-    const npcPromises = [];
+const createBosses = (knex, boss) => {
+  return knex('bosses').insert(boss)
+}
 
-    location.name.forEach(npc => {
-      
-    });
-  }) 
+const createNpcs = (knex, npcs) => {
+  return knex('friendly npcs').insert(npcs)
 }
 
 
-exports.seed = function(knex, Promise) {
-  // Deletes ALL existing entries
+exports.seed = (knex) => { 
   return knex('bosses').del()
-  .then(() => knex('friendly npcs').del())
-  .then(() => knex('locations').del())
-  .then(() => )
-  .catch(() => console.log('Error seeding file'));
+    .then(() => knex('friendly npcs').del())
+    .then(() => knex('locations').del())
+    .then(() => {
+      let locationPromises = [];
+
+      locationsData.forEach(location => {
+        locationPromises.push(createLocations(knex, location))
+      });
+
+      return Promise.all(locationPromises);
+    })
+  .catch((error) => console.log(`Error seeding data: ${error}`));
 };

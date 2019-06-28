@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('locations', function(table) {
       table.increments('id').primary();
       table.string('name');
-      table.json('image');
+      table.string('image');
 
       table.timestamps(true, true);
     }),
@@ -12,8 +12,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('bosses', function(table) {
       table.increments('id').primary();
       table.string('name');
-      table.json('image');
-      table.string('location');
+      table.string('image');
       table.integer('location_id').unsigned()
       table.foreign('location_id')
         .references('locations.id');
@@ -24,8 +23,7 @@ exports.up = function(knex, Promise) {
     knex.schema.createTable('friendly npcs', function (table) {
       table.increments('id').primary();
       table.string('name');
-      table.json('image');
-      table.string('location');
+      table.string('image');
       table.integer('location_id').unsigned()
       table.foreign('location_id')
         .references('locations.id');
