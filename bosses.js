@@ -329,10 +329,3 @@ const bosses = [
   category: 'boss'
 }
 ]
-
-const bossesFilter = bosses.filter(boss => {
-  if (boss.location === 'White Palace') {
-boss  }
-})
-
-console.log(bossesFilter);

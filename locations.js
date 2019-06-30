@@ -335,6 +335,14 @@ const locations = [
     {
       name: 'Marmu',
       image:'https://vignette.wikia.nocookie.net/hollowknight/images/1/10/Marmu_Icon.png/revision/latest?cb=20170511213232',
+    }],
+    npcs: [{
+      name: 'Moss Prophet',
+      image:'https://vignette.wikia.nocookie.net/hollowknight/images/5/5a/Moss_Prophet_Circle.png/revision/latest/scale-to-width-down/150?cb=20170426184415',
+    },
+    {
+      name: 'The White Lady',
+      image:'https://vignette.wikia.nocookie.net/hollowknight/images/9/9c/White_Lady_Circle.png/revision/latest/scale-to-width-down/150?cb=20170426190446',
     }]
    },
   { 
@@ -388,7 +396,151 @@ const locations = [
       name: 'Godseeker',
       image:'https://vignette.wikia.nocookie.net/hollowknight/images/0/0c/Godseeker_Cirle.png/revision/latest/scale-to-width-down/150?cb=20180830232006',
     }]
+   },
+   {
+     name: 'Ancient Basin',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/4/4f/Ancient_Basin_Tram.png/revision/latest?cb=20190213070249',
+     bosses: [{
+       name: 'Broken Vessel',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/e/e6/Broken_Vessel_Icon.png/revision/latest?cb=20170511203343',
+     },
+     {
+       name: 'Lost Kin',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/b/be/Lost_Kin_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005221606',
+     }]
+   },
+   {
+     name: 'Pantheon of the Artist',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/6/67/Godhome_Pillars.png/revision/latest?cb=20190305180012',
+     bosses:[{
+       name: 'Paintmaster Sheo',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/2/2f/Paintmaster_Sheo_Icon.png/revision/latest/scale-to-width-down/150?cb=20180827013538'
+     }]
+   },
+   {
+     name: 'Soul Sanctum',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/2/22/Soul_Sanctum_Soul_Warrior_Arena.png/revision/latest?cb=20190402222806',
+     bosses: [{
+       name: 'Soul Master',
+       image: 'https://vignette.wikia.nocookie.net/hollowknight/images/e/e9/Soul_Master_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005205259',
+     },
+     {
+       name: 'Soul Warrior',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/0/0c/Soul_Warrior_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005211941',
+     },
+     {
+       name: 'Soul Tyrant',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/6/6b/Soul_Tyrant_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005221302',
+     }]
+   },
+   {
+     name:'Godhome',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/2/25/Godhome_Entrance.png/revision/latest?cb=20190305175559',
+     bosses: [{
+       name: 'Brothers Oro & Mato',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/6/63/Brothers_Oro_%26_Mato_Icon.png/revision/latest/scale-to-width-down/150?cb=20180827013602',
+     },
+     {
+       name: 'Great Nailsage Sly',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/5/58/Great_Nailsage_Sly_Icon.png/revision/latest/scale-to-width-down/149?cb=20181005211234',
+     },
+     {
+       name: 'Absolute Radiance',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/6/68/Absolute_Radiance_Icon.png/revision/latest/scale-to-width-down/140?cb=20180827013551',
+     },
+     {
+       name: 'Pure Vessel',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/b/b1/Pure_Vessel_Icon.png/revision/latest/scale-to-width-down/150?cb=20180827013611',
+     },
+     {
+       name: 'Sisters of Battle',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/e/e8/Sisters_of_Battle_Icon.png/revision/latest/scale-to-width-down/150?cb=20180827013525',
+     },
+     {
+       name: 'Winged Nosk',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/c/c1/Winged_Nosk_Icon.png/revision/latest/scale-to-width-down/150?cb=20180827013634',
+     }]
+   },
+   {
+     name:'Stone Sanctuary',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/d/dd/Stone_Sanctuary_Exterior.png/revision/latest?cb=20190312032605',
+     bosses: [{
+       name: 'No Eyes',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/7/79/No_Eyes_Icon.png/revision/latest?cb=20170511213232',
+      }]
+   },
+   {
+     name:'Watcher\'s Spire',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/b/b3/Watcher%27s_Spire_Watcher_Knights.png/revision/latest?cb=20190219045717',
+     bosses: [{
+       name: 'Watcher Knight',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/b/b3/Watcher_Knight_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005211823',
+     }]
+   },
+   {
+     name: 'Teacher\'s Archives',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/1/17/Teacher%27s_Archives_Exterior.png/revision/latest?cb=20190227231504',
+     bosses: [{
+       name: 'Uumuu',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/d/d9/Uumuu_Icon.png/revision/latest?cb=20170511210950',
+     }]
+   }, 
+   {
+     name: 'Crystal Peak',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/0/0b/Crystal_Peak_Conveyor_Belts.png/revision/latest?cb=20190221222024',
+     bosses: [{
+       name: 'Crystal Guardian',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/a/af/Crystal_Guardian_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005210132',
+     },
+     {
+       name: 'Enraged Guardian',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/5/54/Enraged_Guardian_Icon.png/revision/latest/scale-to-width-down/140?cb=20181005220902',
+     }]
+   },
+   {
+     name: 'Trial of the Conqueror',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/9/97/Colosseum_Lobby.png/revision/latest?cb=20190219055830',
+     bosses:[{
+       name: 'Oblobble',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/6/66/Oblobble_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005204959',
+     }]
+   },
+   {
+     name: 'Mantis Village',
+     image:'https://vignette.wikia.nocookie.net/hollowknight/images/8/87/Mantis_Village_Mantis_Lords.png/revision/latest?cb=20190302012930',
+     bosses: [{
+       name: 'Mantis Lords',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/b/b2/Mantis_Lords_Icon.png/revision/latest?cb=20170511203618',
+     }]
+   },
+   {
+     name: 'The Hive',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/9/9e/Hive_Tablet_Shelves.png/revision/latest?cb=20190313012230',
+     bosses:[{
+       name: 'Hive Knight',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/5/5f/Hive_Knight_Icon.png/revision/latest/scale-to-width-down/149?cb=20181005210625',
+     }]
+   },
+   {
+     name: 'Trial of the Fool',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/d/d3/Colosseum_Warrior%27s_Pit.png/revision/latest?cb=20190219060129',
+     bosses:[{
+       name: 'God Tamer',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/1/19/God_Tamer_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005211000',
+
+     }]
+   }, 
+   {
+     name:'Tower of Love',
+     image: 'https://vignette.wikia.nocookie.net/hollowknight/images/c/c2/Tower_of_Love_Collector_Area.png/revision/latest?cb=20190219045520',
+     bosses: [{
+       name: 'The Collector',
+       image:'https://vignette.wikia.nocookie.net/hollowknight/images/9/9e/The_Collector_Icon.png/revision/latest/scale-to-width-down/150?cb=20181005213011',
+     }]
    }
+
 ]
+
+
 
 module.exports = locations;
