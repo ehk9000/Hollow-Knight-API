@@ -7,6 +7,10 @@ const database = require('knex')(configuration);
 app.set('port', process.env.PORT || 3000);
 app.use(express.json());
 
+app.listen(app.get('port'), () => {
+  console.log(`App is running ⚡️`)
+});
+
 
 app.get('/', (req, res) => {
   res.status(200).json('Hello world!');
@@ -42,6 +46,24 @@ app.get('/api/v1/hollow-knight/friendly-npcs', (request, response) => {
   })
 });
 
-app.listen(app.get('port'), () => {
-  console.log(`App is running ⚡️`)
+app.post('/api/v1/hollow-knight/bosses', (request, response) => {
+  const boss = request.body;
+  
+  for (let requiredParameter of ['name', 'image', 'location']) {
+    if (!boss[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: {name: <String>, image: <String>,
+           location: <String>}. You are missing "${requiredParameter}" property.`})
+
+    }
+  }
+  database('bosses').insert(boss, 'id')
+    .then(boss =>  {
+      response.status(201).json({id: boss[0]})
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
 });
+
