@@ -53,7 +53,7 @@ app.post('/api/v1/hollow-knight/bosses', (request, response) => {
     if (!boss[requiredParameter]) {
       return response
         .status(422)
-        .send({ error: `Expected format: {name: <String>, image: <String>, location:<String> 
+        .send({ error: `Expected format: {name: <String>, image: <String>, location:<String>. 
           You are missing "${requiredParameter}" property.`})
     }
   }
@@ -82,7 +82,7 @@ app.post('/api/v1/hollow-knight/friendly-npcs', (request, response) => {
     if (!npc[requiredParameter]) {
       return response 
         .status(422)
-        .send({ error: `Expected format: {name: <String>, image: <String>, location: <String>}
+        .send({ error: `Expected format: {name: <String>, image: <String>, location: <String>}.
           You are missing "${requiredParameter}" property.`})
     }
   }
@@ -101,6 +101,26 @@ app.post('/api/v1/hollow-knight/friendly-npcs', (request, response) => {
       .catch(error => {
         response.status(500).json({ error })
       })
+    })
+})
+
+app.post('/api/v1/hollow-knight/locations', (request, response) => {
+  const location = request.body;
+
+  for (let requiredParameter of ['name', 'image']) {
+    if (!location[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: {name: <String>, image:<String>}. "${requiredParameter}" property` })
+    }
+  }
+  
+  database('locations').insert(location, 'id')
+    .then(location => {
+      response.status(201).json({ id: location[0]})
+    })
+    .catch(error => {
+      response.status(500).json({ error })
     })
 })
 
