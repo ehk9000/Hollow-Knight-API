@@ -172,4 +172,44 @@ app.get('/api/v1/hollow-knight/locations/:id', (request, response) => {
     })
 })
 
+app.delete('/api/v1/hollow-knight/bosses/:id', (request,response) => {
+  database('bosses').where('id', request.params.id).delete()
+    .then(boss => {
+      if (boss) {
+        response.status(200).json(`Boss with id ${request.params.id} was successfully deleted`)
+      } else {
+        response.status(422).json({error: `Could not find Boss with id ${request.params.id}`})
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
 
+app.delete('/api/v1/hollow-knight/friendly-npcs/:id', (request, response) => {
+  database('friendly npcs').where('id', request.params.id).delete()
+    .then(npc => {
+      if (npc) {
+        response.status(200).json(`Friendly Npc with id ${request.params.id} was successfully deleted`)
+      } else {
+        response.status(422).json({error: `Could not find Friendly Npc with id ${request.params.id}`})
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
+
+app.delete('/api/v1/hollow-knight/locations/:id', (request, response) => {
+  database('locations').where('id', request.params.id).delete()
+    .then(location => {
+      if (location) {
+        response.status(200).json(`Location with id ${request.params.id} was successfully deleted`)
+      } else {
+        response.status(422).json({error: `Could not find Location with id ${request.params.id}`})
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error }) 
+    })
+})
