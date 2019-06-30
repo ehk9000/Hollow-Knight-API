@@ -13,7 +13,7 @@ app.listen(app.get('port'), () => {
 
 
 app.get('/', (req, res) => {
-  res.status(200).json('Hello world!');
+  res.status(200).json('Visit https://hollow-knight.herokuapp.com/api/v1/hollow-knight/bosses, https://hollow-knight.herokuapp.com/api/v1/hollow-knight/friendly-npcs, or https://hollow-knight.herokuapp.com/api/v1/hollow-knight/locations to begin!');
 });
 
 app.get('/api/v1/hollow-knight/bosses', (request, response) => {
