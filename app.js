@@ -104,5 +104,21 @@ app.post('/api/v1/hollow-knight/friendly-npcs', (request, response) => {
     })
 })
 
-// app.get('/api/v1/hollow-knight/bosses:id')``
+app.get('/api/v1/hollow-knight/bosses:id', (request, response) => {
+  database('bosses').where('id', request.params.id).select()
+    .then(boss => {
+      if (boss.length) {
+        response.status(200).json(boss);
+      } else {
+        response.status(404).json({
+          error: `Could not find boss with id ${request.params.id}`
+        })
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error });
+    })
+})
+
+
 
