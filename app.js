@@ -104,7 +104,7 @@ app.post('/api/v1/hollow-knight/friendly-npcs', (request, response) => {
     })
 })
 
-app.get('/api/v1/hollow-knight/bosses:id', (request, response) => {
+app.get('/api/v1/hollow-knight/bosses/:id', (request, response) => {
   database('bosses').where('id', request.params.id).select()
     .then(boss => {
       if (boss.length) {
@@ -120,5 +120,36 @@ app.get('/api/v1/hollow-knight/bosses:id', (request, response) => {
     })
 })
 
+app.get('/api/v1/hollow-knight/friendly-npcs/:id', (request, response) => {
+  database('friendly npcs').where('id', request.params.id).select()
+    .then(npc => {
+      if (npc.length) {
+        response.status(200).json(npc);
+      } else {
+        response.status(404).json({
+          error: `Could not find npc with id ${request.params.id}`
+        })
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
+
+app.get('/api/v1/hollow-knight/locations/:id', (request, response) => {
+  database('locations').where('id', request.params.id).select()
+    .then(location => {
+      if (location.length) {
+        response.status(200).json(location);
+      } else {
+        response.status(404).json({
+          error: `Could not find location with id ${request.params.id}`
+        })
+      }
+    })
+    .catch(error => {
+      response.status(500).json({ error })
+    })
+})
 
 
