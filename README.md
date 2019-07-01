@@ -8,7 +8,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 
 #### GET /api/v1/hollow-knight/bosses
 
-##### List of Bosses
+#### List of Bosses
 | Name        | Description                                       | Type   |
 | ------------|:-------------------------------------------------:| ----:  |
 | `id`          | The identifier for the boss                       | `number` |
@@ -18,7 +18,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 
 #### GET /api/v1/hollow-knight/friendly-npcs
 
-##### List of Friendly Npcs 
+#### List of Friendly Npcs 
 | Name        | Description                                       | Type   |
 | ------------|:-------------------------------------------------:| ----:  |
 | `id`          | The identifier for the friendly npc               | `number` |
@@ -28,7 +28,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 
 #### GET /api/v1/hollow-knight/locations
 
-##### List of Locations
+#### List of Locations
 | Name        | Description                                       | Type   |
 | ------------|:-------------------------------------------------:| ----:  |
 | `id`          | The identifier for location                       | `number` |
@@ -37,7 +37,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 
 ## Specific Resource 
 
-#### GET /api/v1/hollow-knight/bosses/{id}
+### GET /api/v1/hollow-knight/bosses/{id}
 
 | Name        | Description                                       | Type   |
 | ------------|:-------------------------------------------------:| ----:  |
@@ -46,7 +46,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 | `image`       | A link to an image of the boss                    | `string` | 
 | `location_id` | The identifier of the location of the boss        | `number` |
 
-#### GET /api/v1/hollow-knight/friendly-npcs/{id}
+### GET /api/v1/hollow-knight/friendly-npcs/{id}
 
 | Name        | Description                                       | Type   |
 | ------------|:-------------------------------------------------:| ----:  |
@@ -55,7 +55,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 | `image`       | A link to an image of the boss                    | `string` | 
 | `location_id` | The identifier of the location of the npc         | `number` |
 
-#### GET /api/v1/hollow-knight/locations/{id}
+### GET /api/v1/hollow-knight/locations/{id}
 
 | Name        | Description                                       | Type   |
 | ------------|:-------------------------------------------------:| ----:  |
@@ -66,7 +66,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 
 ## Create
 
-#### POST /api/v1/hollow-knight/bosses/
+### POST /api/v1/hollow-knight/bosses/
 
 | Name | Description                                    | Type    |
 |------|:----------------------------------------------:|--------:|
@@ -74,7 +74,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 | `image`| Link to an image of the boss                 | `string`|
 | `location`| Name of the location the boss is found in | `string`|
 
-#### POST /api/v1/hollow-knight/friendly-npcs/
+### POST /api/v1/hollow-knight/friendly-npcs/
 
 | Name | Description                                    | Type    |
 |------|:----------------------------------------------:|--------:|
@@ -82,7 +82,7 @@ This project is a RESTful api for the bosses, friendly NPCs, and locations from 
 | `image`| Link to an image of the friendly npc         | `string`|
 | `location`| Name of the location the npc is found in  | `string`|
 
-#### POST /api/v1/hollow-knight/locations/
+### POST /api/v1/hollow-knight/locations/
 
 | Name | Description                                    | Type    |
 |------|:----------------------------------------------:|--------:|
